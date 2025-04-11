@@ -1,0 +1,1046 @@
+const log = (msg) => console.log('%c[INTANT] ' + msg, "color: #9A00C0");
+var stepa = localStorage.getItem("stepa");
+console.clear();
+if (stepa === "true") {
+} else {
+    document.open();
+    document.write(
+        `<!doctypehtml><title>...</title><style>.container{margin:auto;width:100%;text-align:center;font-family:Play,Verdana;position:relative}.hell{position:absolute;top:150px;left:50%;transform:translateX(-50%)}.client{position:absolute;top:240px;left:50%;transform:translateX(-50%)}.gif{position:fixed;bottom:0;right:0;width:50px;height:auto}</style><body style=background-color:#8b00ff><div class=container><h1 class=hell>『I』『N』『T』『A』『N』『T』</h1><h1 class=client>ＣＬＩＥＮＴ</h1><img class=gif src=https://media1.tenor.com/m/HnJ-a1i_Bp8AAAAC/patrick-bateman-sigma.gif></div><script></script>`
+    );
+    document.close();
+};
+log("Started");
+
+function gay() {
+    if (window.location.pathname !== "/") {
+        log(`Injection Not Needed`);
+        return; // макс оптимиз но эмодзи https://raw.githubusercontent.com/09653e4567891/newinjektit/refs/heads/main/dvizhok_nobyi_css_star
+    } // стабиль https://raw.githubusercontent.com/09653e4567891/newinjektit/refs/heads/main/intpos
+    let url = "https://raw.githubusercontent.com/09653e4567891/newinjektit/refs/heads/main/intpos"; //https://raw.githubusercontent.com/09653e4567891/newinjektit/refs/heads/main/topcre
+
+    fetch(url)
+        .then(response => response.text())
+        .then(starSRC => {
+            if (starSRC !== undefined) {
+                log("Src Fetched Successfully");
+            }
+
+            if (localStorage.getItem("gemindeed") === null) {
+                localStorage.setItem("gemindeed", "#ff0000");
+            }
+
+            if (localStorage.getItem("gemindeed1") === null) {
+                localStorage.setItem("gemindeed1", "#ff0000");
+            }
+            const start_time = performance.now();
+
+            log("Loading Mods");
+
+            //Badges
+            const localStorageKey = "badgergers";
+            const localStorageData = localStorage.getItem(localStorageKey);
+
+            const badgegersData = JSON.parse(localStorageData);
+
+            if (Array.isArray(badgegersData) && badgegersData.length > 0) {
+                const newCaseTemplate = `case "{name}": this.icon = "{url}"; break;`;
+                let newCases = "";
+                let newBadges = "";
+
+                badgegersData.forEach(({
+                    name
+                    , url
+                }) => {
+                    const sanitizedCaseName = name.replace(/\s/g, "");
+                    newCases += newCaseTemplate
+                        .replace("{name}", sanitizedCaseName)
+                        .replace("{url}", url);
+                    newBadges += `"${sanitizedCaseName}":"${name}",`;
+                });
+
+                const seasonalIndex = starSRC.indexOf('case"seasonal":');
+                if (seasonalIndex !== -1) {
+                    starSRC =
+                        starSRC.slice(0, seasonalIndex) +
+                        newCases +
+                        starSRC.slice(seasonalIndex);
+                }
+
+                const blankIndex = starSRC.indexOf('blank:"Blank"');
+                if (blankIndex !== -1) {
+                    newBadges = newBadges.replace(/,\s*$/, "");
+                    starSRC =
+                        starSRC.slice(0, blankIndex + 'blank:"Blank"'.length) +
+                        "," +
+                        newBadges +
+                        starSRC.slice(blankIndex + 'blank:"Blank"'.length);
+                }
+            }
+            log("Badges Added");
+            const lowNameCase = localStorage.getItem("lownamecase");
+            const timDel = localStorage.getItem("timdel");
+            const leaderunde = localStorage.getItem("leaderunde");
+            const get = localStorage.getItem("emopacity");
+            const gemslol = localStorage.getItem("gemindeed");
+            const gemslol1 = localStorage.getItem("gemindeed1");
+            const blurdes = localStorage.getItem("blurdes");
+            const stationisten = localStorage.getItem("stationisten");
+            const weaponisten = localStorage.getItem("weaponisten");
+            const rabasom = localStorage.getItem("rabasom");
+            const ass = localStorage.getItem("ass");
+            const pol = localStorage.getItem("pol");
+            const anal = localStorage.getItem("anal");
+            const anss = localStorage.getItem("anss");
+            const ecp = localStorage.getItem("ecp");
+            const abugg = localStorage.getItem("abugg");
+            const faborn = localStorage.getItem("faborn");
+            const webonore = localStorage.getItem("webonore");
+            const beambock = localStorage.getItem("beambock");
+            const agugg = localStorage.getItem("agugg");
+            starSRC = starSRC.replace(/this\.hue,\.5,1/g, 'this.hue,1,1');
+            starSRC = starSRC.replace(/this\.hue,\.5,.5/g, 'this.hue,1,1');
+            starSRC = starSRC.replace(/"fullcolor"===this\.custom\.finish&&(this\.custom\.finish="alloy"),/, "");
+            starSRC = starSRC.replace(`w === this.OOlOI.IIO0O.status.id && (this.OOlOI.IIO0O.status.kills++, S = this.OOlOI.names.get(U)`, `w === this.OOlOI.IIO0O.status.id && (this.OOlOI.IIO0O.status.kills++, gg.bar(), S = this.OOlOI.names.get(U)`);
+            starSRC = starSRC.replace(/case "swaston":\s*this\.icon = "https:\/\/cdn\.discordapp\.com\/attachments\/1221561763267346442\/1256006161958703244\/nazi-symbol-3-removebg-preview\.png\?ex=668083e4&is=667f3264&hm=e4efeebfc6960821ef0e7a91657dc6d393b6e98a4db2f105672337c79d40a601&";\s*break;/g, 'case "swaston":\n                                    this.icon = "https://i.postimg.cc/fR3mJ8Vg/png-transparent-nazi-party-nazism-swastika-second-world-war-germany-fear-and-misery-of-the-third-rei.png";\n                                    break;');
+            if (get) {
+                starSRC = starSRC.replace(/>=\s*4/, `>= ${get}`);
+                log(get + " Emotes Ye!");
+            }
+
+            if (gemslol) {
+                starSRC = starSRC.replace(/16711680/g, `"${gemslol}"`);
+                starSRC = starSRC.replace(/specular:16744576/g, `specular:"${gemslol1}"`);
+                log("Crystal Color Ye!");
+            }
+
+            if (lowNameCase === "true") {
+                starSRC = starSRC.replace(/\.toUpperCase\(\)/g, "");
+                starSRC = starSRC.replace(/text-transform: uppercase;/gim, "");
+                log("Lowercase Ye!");
+            }
+
+            if (timDel === "true") {
+                let t = this;
+                let m = setInterval(() => {
+                    if ("survival" == Object.values(window.module.exports.settings).find(e => e && e.mode).mode.id) {
+                        null == t.serverMin && (t.serverMin = Math.round(Object.values(window.module.exports.settings).find(e => e.mode).mode.game_info.servertime / 6e4), t.serverJoinStamp = Date.now());
+                        let e = document.getElementById("timer");
+                        null == e && ((e = document.createElement("div")).id = "timer", e.style.position = "absolute", e.style.top = "0px", e.style.left = "0px", e.style.color = "#88419c", e.style.fontSize = "20px", e.style.fontFamily = "Arial", e.style.pointerEvents = "none");
+                        let n = 30 - t.serverMin - Math.round((Date.now() - t.serverJoinStamp) / 1e3) / 60;
+                        (n = n.toFixed(2)) < 0 ? (e.innerHTML = "Survival Has Started!", clearInterval(m)) : e.innerHTML = "Survival in " + n + "m", document.body.appendChild(e);
+                    }
+                }, 1e3);
+                log("Timer Ye!");
+            }
+
+
+            if (leaderunde === "true") {
+                starSRC = starSRC.replace(
+                    /this\.[iI10OlL]{3,6}\.mode\.radar_shows_leader/g, "1"
+                );
+                log("Leader Ye!");
+            }
+            if (pol === "true") {
+                let s = setInterval(function () {
+                    let e = Object.values(window.module.exports.settings).find(e => e.mode);
+                    ((e || {}).mode || {}).game_info && (ModdingMode.prototype.setUIComponent.call(e.mode, {
+                        id: "radar_background",
+                        components: [{
+                            type: "box",
+                            position: [0, 0, 100, 100],
+                            stroke: "#FFF",
+                            width: 1
+                        }]
+                    }), clearInterval(s))
+                }, 500)
+                log("Snag Indicator Ye!");
+            }
+
+            if (rabasom === "true") {
+                starSRC = starSRC.replace(/this\.radar_zoom = ([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[eE]([+-]?\d+))?/g, 'this.radar_zoom = 1');
+                log("Radar Ye!");
+            }
+
+            if (ass === "true") {
+                starSRC = starSRC.replace(/requestAnimationFrame\(function\((.*?)\){return function\(\){return t\.([iI10OlL]{3,6})\(\)}}\(this\)\),this\.([iI10OlL]{3,6})\.paused\)/, "setTimeout(function($1){return function(){return $1.$2()}}(this), 0),this.$3.paused)");
+                log("Fps Ye!");
+            }
+
+            if (anal === "true") {
+                starSRC = starSRC.replace(/ecp_key:([^,]+,)/, "ecp_key: null, ").replace(/steamid:([^,]+,)/, "steamid: null,").replace(/bonus:([^,]+,)/, "bonus:true,");
+                let h = ["Arkady Darell", "Bel Riose", "Cleon I", "Dors Venabili", "Ebling Mis", "Gaal Dornick", "Hari Seldon", "Hober Mallow", "Janov Pelorat", "The Mule", "Preem Palver", "R.D. Olivaw", "R.G. Reventlov", "Raych Seldon", "Salvor Hardin", "Wanda Seldon", "Yugo Amaryl", "James T. Kirk", "Leonard McCoy", "Hikaru Sulu", "Montgomery Scott", "Spock", "Picard", "Christine Chapel", "Nyota Uhura", "Pavel Chekov", "Ford", "Zaphod", "Marvin", "Anakin", "Luke", "Leia", "Ackbar", "Tarkin", "Jabba", "Rey", "Kylo", "Han", "Vader", "D.A.R.Y.L.", "HAL 9000", "Lyta Alexander", "Stephen Franklin", "Lennier",];
+                starSRC = starSRC.replace(/player_name:([^,]+,)/, 'player_name: "' + h[Math.floor(Math.random() * h.length)].toUpperCase() + '",');
+                log("Anon Ye!");
+            }
+
+            if (ecp === "true") {
+                starSRC = starSRC.replace(/ecp_key:.*?,/g, "ecp_key:null,"
+                );
+                starSRC = starSRC.replace(/steamid:.*?,/g, 'steamid:"76561198442153311",'
+                );
+                starSRC = starSRC.replace("return 0===t.timeout?(window.onbeforeunload=null,t.reloadGame()):t.countdown()", "return 0===1?(window.onbeforeunload=null,t.reloadGame()):t.countdown()"
+                );
+                localStorage.ECPVerified = "yes";
+                localStorage.ECPKey = "INTANT";
+                log("ECP Ye!");
+            }
+
+            if (abugg === "true") {
+                let r = starSRC.match(/\(this\.[iI10OlL]{3,6}\.[iI10OlL]{3,6}\.status\.kills\+\+,/)[0].match(/[iI10OlL]{4,6}/g);
+                starSRC = starSRC.replace("(this." + r[0] + "." + r[1] + ".status.kills++,", "(this." + r[0] + "." + r[1] + ".status.kills++, window.autogg(),");
+                log("Auto GG Ye!");
+            }
+
+            if (stepa === "true") {
+                setInterval(function () {
+                    var texts = [
+                        "Chat Bubbles", "Show Blank Badges", "Self-ship Tag", "Explosions",
+                        "Client Extended Settings", "Crystals Color", "Reset", "Chat Emotes Capacity",
+                        "Anonymous Mode (joining the game as a fully non-ECP ship)",
+                        "Starblast Shipyard", "The ship tree has been revamped thanks to the awesome work of the community! More info on the official Discord server.",
+                        "Starblast Serverlist+", "Starblast Standalone",
+                        "Ship Tree Revamped!"
+                    ];
+
+                    function hideElements() {
+                        var setSettings = document.getElementById('set-settings');
+                        if (setSettings) {
+                            setSettings.textContent = 'INTANT';
+                        }
+
+                        texts.forEach(function (text) {
+                            var elements = Array.from(document.querySelectorAll("div.option, div.options, p, h2")).filter(el => el.textContent.includes(text));
+                            elements.forEach(function (el) {
+                                el.style.display = 'none';
+                            });
+                        });
+
+                        var crystalColorInput = document.querySelector('input#crystal-color');
+                        if (crystalColorInput) {
+                            crystalColorInput.style.display = 'none';
+                        }
+                    }
+
+                    var observer = new MutationObserver(hideElements);
+                    observer.observe(document.body, { childList: true, subtree: true });
+                    hideElements();
+                }, 250);
+                log("⚠️Set??? You Gay!");
+            }
+
+            window.autogg = function () {
+                Object.values(Object.values(window.module.exports.settings).find(e => e.mode)).find(e => e.socket).socket.send(JSON.stringify({
+                    name: "say",
+                    data: "SQ"
+                }))
+            };
+
+            if (beambock === "true") {
+                starSRC = starSRC.replace(/\s*&&\s*this\.team\.open/g, '');
+                log("Teams Ye!");
+            }
+
+            if (faborn === "true") {
+                starSRC = starSRC.replace(/respawn_delay = ([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[eE]([+-]?\d+))?/g, 'respawn_delay = 1');
+                starSRC = starSRC.replace(/<span id = "menucountdown"><\/span>\s*\(<span id = "menucountdown"><\/span>\)\s*/, '');
+                log("Fast Repair Ye!");
+            }
+
+            if (webonore === "true") {
+                starSRC = starSRC.replace(/!this\.[iI10OlL]{3,6}\.mode\.restricted_weapons_store/g, "1");
+                log("Weapon Store Ye!");
+            }
+
+            var regex = /var\s+x\s*=\s*document\.querySelector\(".training"\),/;
+            starSRC = starSRC.replace(regex, "");
+            const end_time = performance.now();
+            log(`loading Time - ${(end_time - start_time).toFixed(0)}ms`);
+            document.open();
+            document.write(starSRC);
+            document.close();
+            log("Document Loaded");
+            setTimeout(() => {
+                log("Loading Style");
+                document.getElementById("training").style.display = "none";
+
+                if (blurdes === "true") {
+                    var overlay = document.querySelector("#overlay");
+                    var div = document.createElement("div");
+                    div.id = "blur";
+                    div.style.position = "absolute";
+                    div.style.top = "0";
+                    div.style.left = "0";
+                    div.style.width = "100%";
+                    div.style.height = "100%";
+                    div.style.background = "hsla(240, 100%, 50%, 0.18)";
+                    div.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
+                    div.style.backdropFilter = "blur(5px)";
+                    div.style.webkitBackdropFilter = "blur(5px)";
+                    div.style.pointerEvents = "none";
+                    div.style.zIndex = "0";
+                    overlay.insertBefore(div, overlay.firstChild);
+                    overlay.style.zIndex = "1";
+                    log("Blur Added");
+                }
+                const plaything = document.querySelector("#play");
+                const moddingthing = document.querySelectorAll(".mod");
+
+                const onGameStart = () => {
+                    document.getElementById("blur").style.display = "none";
+                    plaything.removeEventListener("click", onGameStart);
+                };
+
+                plaything.addEventListener("click", onGameStart);
+                log("Settings Loaded");
+
+                var socialDie1 = document.querySelector(".bottom-left .changelog-new div");
+                var bottomLeftMenu = document.querySelector(".bottom-left");
+
+                if (socialDie1) {
+                    while (socialDie1.firstChild) {
+                        socialDie1.removeChild(socialDie1.firstChild);
+                    }
+
+                    var loveIcon = document.createElement("i");
+                    loveIcon.className = "sbg sbg-menu";
+                    socialDie1.appendChild(loveIcon);
+                    loveIcon.style.position = "relative";
+                    loveIcon.style.top = "50%"; // Изменено на '50%'
+                    loveIcon.style.left = "50%"; // Изменено на '50%'
+                    loveIcon.style.transform = "translate(-50%, -0%)"; // Добавлено для центрирования
+                    loveIcon.style.zIndex = "10000";
+                    loveIcon.style.width = "359px";
+                    loveIcon.style.height = "50px";
+                    loveIcon.style.display = "flex";
+                    loveIcon.style.justifyContent = "center";
+                    loveIcon.style.alignItems = "center";
+                    loveIcon.style.fontSize = "30px"; // Добавлено: размер шрифта
+                    loveIcon.style.lineHeight = "30px"; // Добавлено: высота строки
+
+                    // Используем существующее меню (которое уже внутри socialDie1)
+                    var settingstab = document.getElementById("settings-manager");
+
+                    if (!settingstab) { // Если меню еще не существует, создаем его
+                        settingstab = document.createElement("div");
+                        settingstab.id = "settings-manager";
+                        settingstab.style.position = "relative";  // Теперь меню будет внутри changelog-new
+                        settingstab.style.transition = "max-height 0.5s ease, opacity 0.6s ease";  // Плавное открытие
+                        settingstab.style.maxHeight = "0px"; // Начальная высота скрытого меню
+                        settingstab.style.overflow = "hidden"; // Прячем элементы за пределами
+                        settingstab.style.opacity = "1"; // Начальная прозрачность
+                        socialDie1.appendChild(settingstab);
+                    }
+                    addSettingsContent(settingstab);
+
+                    socialDie1.addEventListener("mouseover", function () {
+                        if (settingstab.style.opacity === "0") {
+                            console.log("Settings Opened");
+                            // Плавно открыть меню
+                            settingstab.style.maxHeight = "532px"; // Открываем меню (расширяем до максимума)
+                            settingstab.style.opacity = "1"; // Плавное открытие
+                        }
+                    });
+
+                    socialDie1.addEventListener("mouseleave", function () {
+                        if (settingstab.style.opacity === "1") {
+                            console.log("Settings Closed");
+                            // Плавно закрыть меню
+                            settingstab.style.maxHeight = "0px"; // Закрываем меню
+                            settingstab.style.opacity = "0"; // Плавное скрытие
+                        }
+                    });
+
+                    loadSettings();
+                    attachEventListeners();
+                }
+
+                // 🏷 Добавление содержимого настроек
+                function addSettingsContent(settingstab) {
+                    //нов метод бут добавить применение
+                    const settings = [];
+                    settings.forEach(setting => {
+                        const checkbox = createCheckbox(setting.id, setting.text);
+                        settingstab.appendChild(checkbox);
+                    });
+                    // старый основа
+                    //Lowercase Name
+                    var lwerlol = document.createElement("input");
+                    lwerlol.type = "checkbox";
+                    lwerlol.id = "lowercaseName";
+                    var lowerlol = document.createElement("label");
+                    lowerlol.htmlFor = "lowercaseName";
+                    lowerlol.appendChild(document.createTextNode("Lowercase Name"));
+                    lowerlol.style.userSelect = "none";
+                    lowerlol.style.pointerEvents = "none";
+                    lowerlol.style.fontSize = "19px";
+                    //Uncover Leader
+                    var checkleader = document.createElement("input");
+                    checkleader.type = "checkbox";
+                    checkleader.id = "uncoverLeader";
+                    var label1 = document.createElement("label");
+                    label1.htmlFor = "uncoverLeader";
+                    label1.appendChild(document.createTextNode("Uncover Leader"));
+                    label1.style.userSelect = "none";
+                    label1.style.pointerEvents = "none";
+                    label1.style.fontSize = "19px";
+                    var br1 = document.createElement("br");
+                    br1.style.userSelect = "none";
+                    br1.style.pointerEvents = "none";
+                    //Radar Zoom
+                    var babardo = document.createElement("input");
+                    babardo.type = "checkbox";
+                    babardo.id = "radarzoom";
+                    var babadom = document.createElement("label");
+                    babadom.htmlFor = "radarzoom";
+                    babadom.appendChild(document.createTextNode("Radar Zoom"));
+                    babadom.style.userSelect = "none";
+                    babadom.style.pointerEvents = "none";
+                    babadom.style.fontSize = "19px";
+                    //фпс
+                    var фафас = document.createElement("input");
+                    фафас.type = "checkbox";
+                    фафас.id = "fpsanlock";
+                    var рейк = document.createElement("label");
+                    рейк.htmlFor = "fpsanlock";
+                    рейк.appendChild(document.createTextNode("Fps Anlock"));
+                    рейк.style.userSelect = "none";
+                    рейк.style.pointerEvents = "none";
+                    рейк.style.fontSize = "19px";
+                    //полоски
+                    var polos = document.createElement("input");
+                    polos.type = "checkbox";
+                    polos.id = "poli";
+                    var polos1 = document.createElement("label");
+                    polos1.htmlFor = "poli";
+                    polos1.appendChild(document.createTextNode("Snag Indicator"));
+                    polos1.style.userSelect = "none";
+                    polos1.style.pointerEvents = "none";
+                    polos1.style.fontSize = "19px";
+                    //анон
+                    var gh = document.createElement("input");
+                    gh.type = "checkbox";
+                    gh.id = "anonmode";
+                    var gau = document.createElement("label");
+                    gau.htmlFor = "anonmode";
+                    gau.appendChild(document.createTextNode("Anon Mode"));
+                    gau.style.userSelect = "none";
+                    gau.style.pointerEvents = "none";
+                    gau.style.fontSize = "19px";
+                    //set
+                    var ga12 = document.createElement("input");
+                    ga12.type = "checkbox";
+                    ga12.id = "setz";
+                    var sema2 = document.createElement("label");
+                    sema2.htmlFor = "setz";
+                    sema2.appendChild(document.createTextNode("Set"));
+                    sema2.style.userSelect = "none";
+                    sema2.style.pointerEvents = "none";
+                    sema2.style.fontSize = "19px";
+                    //фпсаа
+                    var ап = document.createElement("input");
+                    ап.type = "checkbox";
+                    ап.id = "hard";
+                    var рат = document.createElement("label");
+                    рат.htmlFor = "hard";
+                    рат.appendChild(document.createTextNode("Hardware Fps Anlock"));
+                    рат.style.userSelect = "none";
+                    рат.style.pointerEvents = "none";
+                    рат.style.fontSize = "19px";
+                    //ecp
+                    var иси = document.createElement("input");
+                    иси.type = "checkbox";
+                    иси.id = "ecpye";
+                    var гей = document.createElement("label");
+                    гей.htmlFor = "ecpye";
+                    гей.appendChild(document.createTextNode("Force Ecp"));
+                    гей.style.userSelect = "none";
+                    гей.style.pointerEvents = "none";
+                    гей.style.fontSize = "19px";
+                    //агу
+                    var агу = document.createElement("input");
+                    агу.type = "checkbox";
+                    агу.id = "abuye";
+                    var сей = document.createElement("label");
+                    сей.htmlFor = "abuye";
+                    сей.appendChild(document.createTextNode("Auto Sorry Hmm?"));
+                    сей.style.userSelect = "none";
+                    сей.style.pointerEvents = "none";
+                    сей.style.fontSize = "19px";
+                    //Fast Respawn
+                    var bapaw = document.createElement("input");
+                    bapaw.type = "checkbox";
+                    bapaw.id = "fastspawm";
+                    var barbas = document.createElement("label");
+                    barbas.htmlFor = "fastspawm";
+                    barbas.appendChild(document.createTextNode("Fast Respawn"));
+                    barbas.style.userSelect = "none";
+                    barbas.style.pointerEvents = "none";
+                    barbas.style.fontSize = "19px";
+                    //Weapon Store
+                    var bored = document.createElement("input");
+                    bored.type = "checkbox";
+                    bored.id = "weaponstore";
+                    var boredto = document.createElement("label");
+                    boredto.htmlFor = "weaponstore";
+                    boredto.appendChild(document.createTextNode("Weapon Store"));
+                    boredto.style.userSelect = "none";
+                    boredto.style.pointerEvents = "none";
+                    boredto.style.fontSize = "19px";
+                    //Bypass Teamlock
+                    var eabock = document.createElement("input");
+                    eabock.type = "checkbox";
+                    eabock.id = "teamlock";
+                    var eamlock = document.createElement("label");
+                    eamlock.htmlFor = "teamlock";
+                    eamlock.appendChild(document.createTextNode("Bypass Teamlock"));
+                    eamlock.style.userSelect = "none";
+                    eamlock.style.pointerEvents = "none";
+                    eamlock.style.fontSize = "19px";
+                    //Blur Option
+                    var blurlol = document.createElement("input");
+                    blurlol.type = "checkbox";
+                    blurlol.id = "blurlol";
+                    var brurwha = document.createElement("label");
+                    brurwha.htmlFor = "blurlol";
+                    brurwha.appendChild(document.createTextNode("Blur"));
+                    brurwha.style.userSelect = "none";
+                    brurwha.style.pointerEvents = "none";
+                    brurwha.style.fontSize = "19px";
+                    //Remove Timer
+                    var bebotmber = document.createElement("input");
+                    bebotmber.type = "checkbox";
+                    bebotmber.id = "removeTimer";
+                    var label3 = document.createElement("label");
+                    label3.htmlFor = "removeTimer";
+                    label3.appendChild(document.createTextNode("Survival Timer"));
+                    label3.style.userSelect = "none";
+                    label3.style.pointerEvents = "none";
+                    label3.style.fontSize = "19px";
+                    //Emotes
+                    var ebot = document.createElement("label");
+                    ebot.htmlFor = "emoteCapacity";
+                    ebot.classList.add("emote-label");
+                    ebot.style.userSelect = "none";
+                    ebot.style.pointerEvents = "none";
+                    ebot.htmlFor = "emoteCapacity";
+                    ebot.appendChild(document.createTextNode("Emote Capacity:"));
+                    ebot.style.fontSize = "19px";
+                    var ebote = document.createElement("span");
+                    ebote.id = "emoteCapacityValue";
+                    ebote.classList.add("emote-value");
+                    ebote.appendChild(document.createTextNode("1"));
+                    ebote.style.userSelect = "none";
+                    ebote.style.pointerEvents = "none";
+                    ebote.style.fontSize = "19px";
+                    var eboti = document.createElement("input");
+                    eboti.type = "range";
+                    eboti.id = "emoteCapacity";
+                    eboti.min = "1";
+                    eboti.max = "5";
+                    eboti.classList.add("emote-slider");
+                    //Gem Color
+                    var gemus = document.createElement("label");
+                    gemus.htmlFor = "gemColor";
+                    gemus.classList.add("color-label");
+                    gemus.style.userSelect = "none";
+                    gemus.style.pointerEvents = "none";
+                    gemus.appendChild(document.createTextNode("Gem Color:"));
+                    gemus.style.fontSize = "19px";
+                    var gembus = document.createElement("input");
+                    gembus.type = "color";
+                    gembus.id = "gemColor";
+                    gembus.classList.add("color-input");
+                    gembus.style.fontSize = "19px";
+                    //Gem Color 2
+                    var gemobus = document.createElement("label");
+                    gemobus.htmlFor = "gemColor1";
+                    gemobus.classList.add("color-label");
+                    gemobus.style.userSelect = "none";
+                    gemobus.style.pointerEvents = "none";
+                    gemobus.appendChild(document.createTextNode("Gem Color 2:"));
+                    gemobus.style.fontSize = "19px";
+                    var gembomus = document.createElement("input");
+                    gembomus.type = "color";
+                    gembomus.id = "gemColor1";
+                    gembomus.classList.add("color-input");
+                    gembomus.style.fontSize = "19px";
+                    //apply button
+                    var applythng = document.createElement("button");
+                    applythng.id = "applyChangesBtn";
+                    applythng.innerHTML = "Apply";
+                    applythng.style.padding = "6px 10px";
+                    applythng.style.fontSize = "1em";
+                    applythng.style.cursor = "pointer";
+                    applythng.style.margin = "20px 0";
+                    applythng.style.textAlign = "center";
+                    applythng.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+                    applythng.style.textShadow = "1px 1px 2px rgba(0, 0, 0, 0.2)";
+                    applythng.style.color = "#fff";
+                    applythng.style.backgroundColor = "#007BFF";
+                    applythng.style.fontFamily = "Arial, sans-serif";
+                    applythng.style.border = "none";
+                    applythng.style.borderRadius = "5px";
+                    //apply things to the Settings Menu
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(lwerlol);
+                    settingstab.appendChild(lowerlol);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(checkleader);
+                    settingstab.appendChild(label1);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(babardo);
+                    settingstab.appendChild(babadom);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(polos);
+                    settingstab.appendChild(polos1);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(фафас);
+                    settingstab.appendChild(рейк);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(ап);
+                    settingstab.appendChild(рат);
+                    settingstab.appendChild(br1.cloneNode());
+                    if (anss === "true") {
+                        var span = document.createElement('span');
+                        span.style.color = 'red';
+                        span.style.fontSize = "19px";
+                        span.textContent = '⚠️You need to buy this feature to use it!';
+
+                        settingstab.appendChild(span);
+                        settingstab.appendChild(br1.cloneNode());
+
+                        console.log("⚠️You need to buy this feature to use it!");
+                    }
+                    settingstab.appendChild(иси);
+                    settingstab.appendChild(гей);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(ga12);
+                    settingstab.appendChild(sema2);
+                    settingstab.appendChild(br1.cloneNode());
+                    if (stepa === "true") {
+                        var link = document.createElement('a');
+                        link.style.color = 'gray';
+                        link.style.fontSize = "19px";
+                        link.textContent = '↑download';
+                        link.href = 'https://chrome-stats.com/d/bidhmieomigmdphceifkifanapkgmplc'; // Замените на вашу ссылку
+                        link.target = '_blank'; // Это откроет ссылку в новой вкладке
+
+                        settingstab.appendChild(link);
+                        settingstab.appendChild(br1.cloneNode());
+                    }
+                    settingstab.appendChild(bapaw);
+                    settingstab.appendChild(barbas);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(bored);
+                    settingstab.appendChild(boredto);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(eabock);
+                    settingstab.appendChild(eamlock);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(blurlol);
+                    settingstab.appendChild(brurwha);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(bebotmber);
+                    settingstab.appendChild(label3);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(gh);
+                    settingstab.appendChild(gau);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(агу);
+                    settingstab.appendChild(сей);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(ebot);
+                    settingstab.appendChild(ebote);
+                    settingstab.appendChild(eboti);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(gemus);
+                    settingstab.appendChild(gembus);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(gemobus);
+                    settingstab.appendChild(gembomus);
+                    settingstab.appendChild(br1.cloneNode());
+                    settingstab.appendChild(applythng);
+                    settingstab.appendChild(br1.cloneNode());
+                }
+
+                // 🧩 Создание чекбокса
+                function createCheckbox(id, labelText) {
+                    const checkboxWrapper = document.createElement("div");
+                    const input = document.createElement("input");
+                    input.type = "checkbox";
+                    input.id = id;
+                    const label = document.createElement("label");
+                    label.htmlFor = id;
+                    label.appendChild(document.createTextNode(labelText));
+                    checkboxWrapper.appendChild(input);
+                    checkboxWrapper.appendChild(label);
+                    return checkboxWrapper;
+                }
+                // 🎨 Создание цветового input
+                function createColorInput(labelText, id) {
+                    const label = document.createElement("label");
+                    label.htmlFor = id;
+                    label.classList.add("color-label");
+                    label.style.userSelect = "none";
+                    label.style.pointerEvents = "auto";
+                    label.appendChild(document.createTextNode(labelText));
+                    label.style.fontSize = "19px";
+
+                    const colorInput = document.createElement("input");
+                    colorInput.type = "color";
+                    colorInput.id = id;
+                    colorInput.classList.add("color-input");
+                    colorInput.style.fontSize = "19px";
+
+                    colorInput.addEventListener("input", function () {
+                        console.log(`${labelText} changed to: ${colorInput.value}`);
+                    });
+
+                    label.appendChild(colorInput);
+                    return label;
+                }
+
+
+
+
+                function attachEventListeners() {
+                    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                    checkboxes.forEach(function (checkbox) {
+                        checkbox.addEventListener("change", function () {
+                            saveSetting(checkbox.id, checkbox.checked);
+                        });
+                    });
+
+                    var rangeInput = document.getElementById("emoteCapacity");
+                    if (rangeInput) {
+                        rangeInput.addEventListener("input", function () {
+                            saveSetting("emoteCapacity", Number(rangeInput.value));
+                            document.getElementById("emoteCapacityValue").textContent =
+                                rangeInput.value;
+                        });
+                        rangeInput.value = getSettingValue("emoteCapacity");
+                        document.getElementById("emoteCapacityValue").textContent =
+                            rangeInput.value;
+                    }
+
+                    var colorInput = document.getElementById("gemColor");
+                    if (colorInput) {
+                        colorInput.addEventListener("input", function () {
+                            saveSetting("gemColor", colorInput.value);
+                        });
+                        colorInput.value = getSettingValue("gemColor");
+                    }
+                    var colorInput2 = document.getElementById("gemColor1");
+                    if (colorInput2) {
+                        colorInput2.addEventListener("input", function () {
+                            saveSetting("gemColor1", colorInput2.value);
+                        });
+                        colorInput2.value = getSettingValue("gemColor1");
+                    }
+
+                    var applyChangesBtn = document.getElementById("applyChangesBtn");
+                    if (applyChangesBtn) {
+                        applyChangesBtn.addEventListener("click", function () {
+                            saveSetting();
+                            location.reload();
+                        });
+                    }
+                }
+
+                function loadSettings() {
+                    var settings = [
+                        "uncoverLeader"
+                        , "removeTimer"
+                        , "emoteCapacity"
+                        , "gemColor"
+                        , "gemColor1"
+                        , "lowercaseName"
+                        , "blurlol"
+                        , "radarzoom"
+                        , "fpsanlock"
+                        , "radarfix"
+                        , "radarfix1"
+                        , "radarfix2"
+                        , "radarfix3"
+                        , "radarfix4"
+                        , "radarfix5"
+                        , "setz"
+                        , "poli"
+                        , "anonmode"
+                        , "hard"
+                        , "ecpye"
+                        , "abuye"
+                        , "teamlock"
+                        , "fastspawm"
+                        , "weaponstore"
+                        ,];
+
+                    settings.forEach(function (setting) {
+                        var key = getKey(setting);
+                        var value = localStorage.getItem(key);
+                        if (value !== null) {
+                            if (setting === "emoteCapacity") {
+                                document.getElementById(setting).value = value;
+                                document.getElementById("emoteCapacityValue").textContent = value;
+                            } else if (setting === "gemColor") {
+                                document.getElementById(setting).value = value;
+                            } else if (setting === "gemColor1") {
+                                document.getElementById(setting).value = value;
+                            } else {
+                                document.getElementById(setting).checked = JSON.parse(value);
+                            }
+                        }
+                    });
+                }
+
+                function saveSetting(setting, value) {
+                    var key = getKey(setting);
+                    if (setting === "gemColor") {
+                        localStorage.setItem(key, value);
+                    } else if (setting === "gemColor1") {
+                        localStorage.setItem(key, value);
+                    } else {
+                        localStorage.setItem(key, JSON.stringify(value));
+                    }
+                }
+
+                function getKey(setting) {
+                    switch (setting) {
+                        case "blurlol":
+                            return "blurdes";
+                        case "uncoverLeader":
+                            return "leaderunde";
+                        case "emoteCapacity":
+                            return "emopacity";
+                        case "gemColor":
+                            return "gemindeed";
+                        case "gemColor1":
+                            return "gemindeed1";
+                        case "lowercaseName":
+                            return "lownamecase";
+                        case "removeTimer":
+                            return "timdel";
+                        case "radarzoom":
+                            return "rabasom";
+                        case "fpsanlock":
+                            return "ass";
+                        case "poli":
+                            return "pol";
+                        case "anonmode":
+                            return "anal";
+                        case "setz":
+                            return "stepa";
+                        case "hard":
+                            return "anss";
+                        case "ecpye":
+                            return "ecp";
+                        case "abuye":
+                            return "abugg";
+                        case "teamlock":
+                            return "beambock";
+                        case "fastspawm":
+                            return "faborn";
+                        case "weaponstore":
+                            return "webonore";
+                        default:
+                            return setting;
+                    }
+                }
+                function getSettingValue(setting) {
+                    var key = getKey(setting);
+                    var value = localStorage.getItem(key);
+
+                    if (setting === "emoteCapacity") {
+                        if (value === null) {
+                            localStorage.setItem(key, 4);
+                            return 4;
+                        } else {
+                            return Number(value);
+                        }
+                    } else if (setting === "gemColor") {
+                        return value || "#ff0000";
+                    } else if (setting === "gemColor1") {
+                        return value || "#ff0000";
+                    }
+
+                    return value ? JSON.parse(value) : false;
+                }
+                log("Badge Manager Loaded");
+
+                var socialDiv = document.querySelector('.social');
+
+                function validateUrl(url) {
+                    var regex = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i;
+                    return regex.test(url);
+                }
+
+                function saveBadge(name, url) {
+                    var badges = JSON.parse(localStorage.getItem('badgergers')) || [];
+                    badges.push({
+                        "name": name
+                        , "url": url
+                    });
+                    localStorage.setItem('badgergers', JSON.stringify(badges));
+                }
+
+                function updateLocalStorage() {
+                    var badges = [];
+                    document.querySelectorAll('#badge-manager div').forEach(function (badgeElement) {
+                        var name = badgeElement.querySelector('p').innerText;
+                        var url = badgeElement.querySelector('img').src;
+                        badges.push({
+                            "name": name
+                            , "url": url
+                        });
+                    });
+
+                    if (badges.length > 0) {
+                        localStorage.setItem('badgergers', JSON.stringify(badges));
+                    } else {
+                        localStorage.removeItem('badgergers');
+                    }
+                }
+
+                function panelka() {
+                    function createPanel() {
+                        const panel = document.createElement('div');
+                        panel.id = 'messagePanel';
+
+                        const title = document.createElement('h4');
+                        title.textContent = 'I N T A N T';
+                        title.style.color = 'white';
+                        title.style.margin = '0';
+                        title.style.padding = '2% 0';
+                        title.style.textAlign = 'center';
+                        title.style.fontSize = '13px';
+
+                        const thx = document.createElement('button');
+                        thx.id = 'thx';
+                        thx.textContent = 'Thx';
+
+                        const blank = document.createElement('button');
+                        blank.id = 'blank';
+                        blank.textContent = 'Blank';
+
+                        const fov = document.createElement('button');
+                        fov.id = 'fov';
+                        fov.textContent = 'Вова';
+
+                        panel.appendChild(title);
+                        panel.appendChild(thx);
+                        panel.appendChild(blank);
+                        panel.appendChild(fov);
+                        document.body.appendChild(panel);
+
+                        const style = document.createElement('style');
+                        style.textContent = `#messagePanel{position:fixed;top:1%;left:95%;transform:translateX(-50%);z-index:100000000;width:160px;height:20px;background:rgba(26,35,126,.5);transition:height 0.3s ease;border-radius:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;backdrop-filter:blur(5px)}#messagePanel:hover{background-color:rgba(26,35,126,.5);height:124px}#messagePanel button{margin:2px;color:white;border-radius:5px;padding:6px;background:transparent;border:2px solid;border-image:linear-gradient(135deg,#3f51b5 5%,#9c27b0 95%) 1;font-size:12px;width:90%;cursor:pointer;transition:background 0.3s ease}#messagePanel button:hover{background:hsla(273,80%,80%,.3)}`;
+                        document.head.appendChild(style);
+
+                        thx.addEventListener('click', () => handleButtonClick('setthx'));
+                        blank.addEventListener('click', () => handleButtonClick('setblank'));
+                        fov.addEventListener('click', () => { if (!fovZoomActive) { fovzoom(); fovZoomActive = !0 } });
+                    }
+                    var fovZoomActive = false;
+
+                    function fovzoom() {
+                        let инд, мсф = [];
+                        document.body.addEventListener("wheel", function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            if ("welcome" == Object.values(window.module.exports.settings).find(e => e && e.mode).mode.id) return;
+                            let хрзн;
+                            if (event.deltaY < 1) {
+                                хрзн = -5;
+                            } else if (event.deltaY > 1) {
+                                хрзн = 5;
+                            }
+
+                            мсф.push(хрзн);
+
+                            (function smoothScroll() {
+                                if (0 === мсф.length || инд) return;
+                                let t = Object.values(Object.values(Object.values(window.module.exports.settings).find(e => e && e.mode)).find(e => e && e.seed)).find(e => e && e.fov);
+                                let n = t.position.z,
+                                    новз = n + мсф.shift(),
+                                    скр = (новз - n) / 2;
+                                инд = setInterval(() => {
+                                    1 >= Math.abs(n - новз) || n === новз ? (t.translateZ(новз - n), clearInterval(инд), инд = null, smoothScroll()) : (n += скр, t.translateZ(скр));
+                                }, 1);
+                            })();
+                        });
+                    }
+                    function fetchObjval(callback) {
+                        const settings = window.module.exports.settings;
+                        const objval = Object.values(Object.values(settings).find(item => item.mode)).find(item => item.socket)?.socket;
+
+                        if (objval && objval.readyState === WebSocket.OPEN) {
+                            callback(objval);
+                        } else {
+                            console.error("Objval not found or WebSocket is not open.");
+                        }
+                    }
+
+                    function sendMessage(objval, message) {
+                        if (objval && objval.readyState === WebSocket.OPEN) {
+                            objval.send(JSON.stringify({ name: "say", data: message }));
+                            console.log("Message sent:", message);
+                        } else {
+                            console.error("WebSocket connection is not open or closed.");
+                        }
+                    }
+
+                    function startSendingMessages(objval, messages) {
+                        let messageIndex = 0;
+                        isSending = true;
+                        intervalId = setInterval(() => {
+                            if (!isSending) return;
+                            sendMessage(objval, messages[messageIndex]);
+                            messageIndex = (messageIndex + 1) % messages.length;
+                        }, 300);
+                    }
+
+                    function stopSendingMessages() {
+                        clearInterval(intervalId);
+                        isSending = false;
+                        console.log("Message sending stopped.");
+                    }
+
+                    function handleButtonClick(set) {
+                        if (isSending) {
+                            stopSendingMessages();
+                            if (activeSet === set) {
+                                activeSet = null;
+                                return;
+                            }
+                        }
+
+                        activeSet = set;
+                        fetchObjval((objval) => {
+                            if (set === 'setthx') {
+                                startSendingMessages(objval, ["Xoooo", "oXooo", "ooXoo", "oooXo", "ooooX", "oooXo", "ooXoo", "oXooo"]);
+                            } else if (set === 'setblank') {
+                                startSendingMessages(objval, ["ooooo"]);
+                            }
+                        });
+                    }
+
+                    let intervalId;
+                    let isSending = false;
+                    let activeSet = null;
+
+                    createPanel();
+                };
+                panelka();
+
+
+                log("Css Applied");
+                log("Settings Added");
+                log("Badge Manager Added");
+                log("Style Loaded Successfully");
+                log("Gay Scripts Loaded");
+            }, 30);
+            //});
+        });
+}
+
+gay();
